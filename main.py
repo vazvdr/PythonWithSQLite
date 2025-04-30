@@ -10,5 +10,3 @@ marca1  = Marca(id=1, nome="Fiat", sigla="FIA")
 veiculo1= Veiculo(placa="KMN-2030", cor="preto", proprietario=pessoa1, marca=marca1)
 
 print(pessoa1)
-print(marca1)
-print(veiculo1)
