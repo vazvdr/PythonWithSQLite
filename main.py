@@ -1,12 +1,16 @@
 from datetime import date
+from bancodedados import BancoDeDados
 from pessoa import Pessoa
 from marca import Marca
 from veiculo import Veiculo
 
+if __name__ == "__main__":
+
+    banco = BancoDeDados()
+    banco.conectar()
+    banco.criar_tabela()
+
 pessoa1 = Pessoa(cpf=12345678900, nome="Vanderson", nascimento=date(1991, 1, 13), oculos=True)
-
-marca1  = Marca(id=1, nome="Fiat", sigla="FIA")
-
-veiculo1= Veiculo(placa="KMN-2030", cor="preto", proprietario=pessoa1, marca=marca1)
+banco.inserir_pessoa(pessoa1)
 
 print(pessoa1)
